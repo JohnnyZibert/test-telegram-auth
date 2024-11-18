@@ -32,7 +32,7 @@ function App() {
       <div className="card">
       {/*<BotButton/>*/}
           <TLoginButton
-              botName="YOUR_BOT_NAME"
+              botName="testbtnbbot"
               buttonSize={TLoginButtonSize.Large}
               lang="en"
               usePic={false}
