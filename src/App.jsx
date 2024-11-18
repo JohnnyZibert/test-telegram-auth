@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import TelegramLoginButton from "react-telegram-login";
+import {TLoginButton, TLoginButtonSize} from "react-telegram-auth";
 
 function BotButton() {
     const url = '/api/auth/getJwtByInitData'
@@ -29,7 +30,19 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-      <BotButton/>
+      {/*<BotButton/>*/}
+          <TLoginButton
+              botName="YOUR_BOT_NAME"
+              buttonSize={TLoginButtonSize.Large}
+              lang="en"
+              usePic={false}
+              cornerRadius={20}
+              onAuthCallback={(user) => {
+                  console.log('Hello, user!', user);
+              }}
+              requestAccess={'write'}
+              additionalClasses={'css-class-for-wrapper'}
+          />
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
