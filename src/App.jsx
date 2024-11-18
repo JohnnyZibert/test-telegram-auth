@@ -41,7 +41,6 @@ function App() {
                   console.log('Hello, user!', user);
               }}
               requestAccess={'write'}
-              additionalClasses={'css-class-for-wrapper'}
           />
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
