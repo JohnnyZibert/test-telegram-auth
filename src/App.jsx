@@ -10,7 +10,7 @@ function BotButton() {
        return  console.log(ctx, 'awdawd');
     };
 
-    return <TelegramLoginButton botName="testbtnbbot" dataOnAuth={onAuth} buttonSize={'large'} />;
+    return <TelegramLoginButton botName="testbtnbbot" dataOnAuth={() => onAuth()} buttonSize={'large'} />;
 }
 
 function App() {
