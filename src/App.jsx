@@ -6,11 +6,11 @@ import TelegramLoginButton from "react-telegram-login";
 
 function BotButton() {
     const url = '/api/auth/getJwtByInitData'
-    const onAuth = (ctx) => {
-       return  console.log(ctx, 'awdawd');
+    const onAuth = (user) => {
+        console.log(user, 'awdawd');
     };
 
-    return <TelegramLoginButton botName="testbtnbbot" dataOnAuth={() => onAuth()} buttonSize={'large'} />;
+    return <TelegramLoginButton botName="testbtnbbot" dataOnAuth={(user) => onAuth(user)} buttonSize={'large'} />;
 }
 
 function App() {
