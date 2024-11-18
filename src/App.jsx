@@ -5,11 +5,12 @@ import './App.css'
 import TelegramLoginButton from "react-telegram-login";
 
 function BotButton() {
+    const url = '/api/auth/getJwtByInitData'
     const onAuth = ctx => {
-        console.log(ctx);
+        console.log(ctx, 'awdawd');
     };
 
-    return <TelegramLoginButton botName="testbtnbbot" requestAccess={'7837491841:AAEB2DdjfsEU5C1Kcd9GJL0X2uKyk1wbmk8'} dataOnAuth={onAuth} buttonSize={'large'}  dataAuthUrl={'https://test-telegram-auth.vercel.app/'}/>;
+    return <TelegramLoginButton botName="testbtnbbot" dataOnAuth={onAuth} buttonSize={'large'} dataAuthUrl={'https://backend.myinfra.dev/api/auth/getJwtByInitData'} />;
 }
 
 function App() {
