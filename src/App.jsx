@@ -16,7 +16,10 @@ function BotButton() {
 
 function App() {
   const [count, setCount] = useState(0)
-
+    const handleTelegramResponse = (user) => {
+        console.log('User:', user);
+        // Здесь можно сохранить данные пользователя в state или отправить на сервер
+    };
 
   return (
     <>
@@ -37,9 +40,7 @@ function App() {
               lang="en"
               usePic={false}
               cornerRadius={20}
-              onAuthCallback={(user) => {
-                  console.log('Hello, user!', user);
-              }}
+              onAuthCallback={handleTelegramResponse}
               requestAccess={'write'}
           />
         <p>
