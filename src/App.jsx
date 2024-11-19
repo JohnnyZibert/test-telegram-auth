@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import TelegramLoginButton from "react-telegram-login";
 import {TLoginButtonSize} from "react-telegram-auth";
-import LoginButton from "./btnAuth/btnAuth.js";
+import LoginButton from "./btnAuth/BtnAuth.tsx";
 
 function BotButton() {
     const url = '/api/auth/getJwtByInitData'
