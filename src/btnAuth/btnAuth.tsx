@@ -29,7 +29,7 @@ export type TLoginButtonProps = Readonly<{
     additionalClassNames?: string;
 }>;
 
-export class TLoginButton extends Component<TLoginButtonProps> {
+class LoginButton extends Component<TLoginButtonProps> {
     private readonly _containerRef = createRef<HTMLDivElement>();
 
     override componentDidMount(): void {
@@ -86,3 +86,5 @@ export class TLoginButton extends Component<TLoginButtonProps> {
         return <div className={`tlogin-button ${this.props.additionalClassNames ?? ''}`} ref={this._containerRef}/>;
     }
 }
+
+export default LoginButton

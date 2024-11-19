@@ -3,8 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import TelegramLoginButton from "react-telegram-login";
-import {TLoginButton} from "./btnAuth/btnAuth.js";
 import {TLoginButtonSize} from "react-telegram-auth";
+import LoginButton from "./btnAuth/btnAuth.js";
 
 function BotButton() {
     const url = '/api/auth/getJwtByInitData'
@@ -35,7 +35,7 @@ function App() {
       <h1>Vite + React</h1>
       <div className="card">
       {/*<BotButton/>*/}
-          <TLoginButton
+          <LoginButton
               botName="testbtnbbot"
               buttonSize={TLoginButtonSize.Large}
               lang="en"
