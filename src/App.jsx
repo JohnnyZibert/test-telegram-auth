@@ -26,6 +26,8 @@ function App() {
     const handleTelegramResponse = (user) => {
         console.log('User:', user);
         setData(user)
+        getTokenAccess(data)
+
         // Здесь можно сохранить данные пользователя в state или отправить на сервер
     };
 
