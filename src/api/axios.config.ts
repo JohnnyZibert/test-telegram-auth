@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const apiUrl = import.meta.env.VITE_PUBLIC_API_URL;
+console.log(apiUrl,'apiUrl')
 export const axiosInstance = axios.create({
     baseURL: apiUrl
 });
