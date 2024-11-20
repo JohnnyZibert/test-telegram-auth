@@ -1,4 +1,4 @@
-import {axiosInstance} from "./axios.config";
+import {axiosInstance} from "./axios.config.ts";
 
 export const getTokenAccess = (initData) => {
     try {
