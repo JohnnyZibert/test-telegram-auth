@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import TelegramLoginButton from "react-telegram-login";
 import {TLoginButtonSize} from "react-telegram-auth";
 import LoginButton from "./btnAuth/BtnAuth.tsx";
+import {getTokenAccess} from "./api/getTokenAccess.ts";
 
 function BotButton() {
     const url = '/api/auth/getJwtByInitData'
@@ -17,8 +18,14 @@ function BotButton() {
 
 function App() {
   const [count, setCount] = useState(0)
+    const [data, setData] = useState()
+
+    useEffect(() => {
+        getTokenAccess(data)
+    }, []);
     const handleTelegramResponse = (user) => {
         console.log('User:', user);
+        setData(user)
         // Здесь можно сохранить данные пользователя в state или отправить на сервер
     };
 
