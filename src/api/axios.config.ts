@@ -9,10 +9,11 @@ axiosInstance.interceptors.request.use(
     async (config) => {
         // const { jwtToken } = useAuthStore.getState();
 
-        if (jwtToken) {
-            config.headers.Authorization = `Bearer ${jwtToken}`;
+        // if (jwtToken) {
+        // ${jwtToken}
+            config.headers.Authorization = `Bearer `;
             config.headers.Accept = config.headers['Accept'] ?? 'application/json';
-        }
+        // }
 
         return config;
     },
