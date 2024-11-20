@@ -20,11 +20,8 @@ function App() {
   const [count, setCount] = useState(0)
     const [data, setData] = useState()
 
-    useEffect(() => {
-        getTokenAccess(data)
-    }, []);
     const handleTelegramResponse = (user) => {
-         getTokenAccess(user)
+         getTokenAccess(user.id)
 
         // Здесь можно сохранить данные пользователя в state или отправить на сервер
     };
