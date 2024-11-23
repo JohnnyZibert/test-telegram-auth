@@ -20,9 +20,8 @@ function App() {
   const [count, setCount] = useState(0)
     const [data, setData] = useState()
 
-    const handleTelegramResponse = (user) => {
-         getTokenAccess(user.id)
-
+    const handleTelegramResponse = async (user) => {
+         await getTokenAccess(user.id)
         // Здесь можно сохранить данные пользователя в state или отправить на сервер
     };
 
